@@ -49,6 +49,7 @@ function game() {
     else if (playerScore < computerScore) console.log(`You lost!
     You: ${playerScore} Computer: ${computerScore}`)
     
-    else console.log(`It's a draw!`)
+    else console.log(`It's a draw!
+    You: ${playerScore} Computer: ${computerScore}`)
 }
 game();
