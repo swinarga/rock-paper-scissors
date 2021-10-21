@@ -105,6 +105,7 @@ body {
     align-items: center;
     font-size: 100px;
     gap: 150px;
+    min-height: 120px;
 }
 .fab.fa-github {
     color: white;
