@@ -10,6 +10,7 @@ body {
     margin: 0;
     background-color: #25383c;
     row-gap: 30px;
+    color: white;
 }
 
 .header {
@@ -30,7 +31,10 @@ body {
 }
 
 .score-container {
+    display: flex;
+    flex-direction: column;
     color: white;
+    row-gap: 30px;
 }
 
 .score {
@@ -68,6 +72,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    font-size: 200px;
 }
 
 .container-image:hover {
@@ -78,16 +83,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    gap: 20px;
 }
 
-img {
+/* img {
     width: 200px;
     height: 200px;
     flex-shrink: 0;
-}
+} */
 
 #message {
     text-align: center;
     font-size: 35px;
     height: 40px;
+}
+
+.round-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    gap: 150px;
+}
+.fab.fa-github {
+    color: white;
+    font-size: 48px;
 }

@@ -42,6 +42,8 @@ scissors.addEventListener("click", () => playGame("SCISSORS"))
 function playGame(playerSelection) {
     document.getElementById("message").innerHTML = '';
     computerSelection = computerPlay();
+    updatePlayerIcon(playerSelection);
+    updateComputerIcon(computerSelection);
     playRound(playerSelection, computerSelection);
 
     if (playerScore == 5) {
@@ -63,4 +65,46 @@ function updateMessage(message) {
 function updateScoreText() {
     document.getElementById("player-score").innerHTML = parseInt(playerScore);
     document.getElementById("computer-score").innerHTML = parseInt(computerScore);
+}
+
+function updatePlayerIcon(playerSelection) {
+    let icon;
+
+    switch (playerSelection) {
+        case "ROCK": {
+            icon = `<i class="far fa-hand-rock"></i>`
+            break;
+
+        }  
+        case "PAPER": {
+            icon = `<i class="far fa-hand-paper"></i>`
+            break;
+        }
+        case "SCISSORS": {
+            icon = `<i class="far fa-hand-scissors"></i>`
+            break;
+        }
+    }
+    document.getElementById("player-icon").innerHTML = icon
+}
+
+function updateComputerIcon(computerSelection) {
+    let icon;
+
+    switch (computerSelection) {
+        case "ROCK": {
+            icon = `<i class="far fa-hand-rock"></i>`
+            break;
+
+        }  
+        case "PAPER": {
+            icon = `<i class="far fa-hand-paper"></i>`
+            break;
+        }
+        case "SCISSORS": {
+            icon = `<i class="far fa-hand-scissors"></i>`
+            break;
+        }
+    }
+    document.getElementById("computer-icon").innerHTML = icon
 }
